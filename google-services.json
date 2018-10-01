@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "807189974100",
+    "firebase_url": "https://exposureapp-9e773.firebaseio.com",
+    "project_id": "exposureapp-9e773",
+    "storage_bucket": "exposureapp-9e773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807189974100:android:303cc29e59d3ac6d",
+        "android_client_info": {
+          "package_name": "com.anthony.exposure2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807189974100-l66iroa2nkjslsqkc8dhm70ptqm4gk7s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anthony.exposure2",
+            "certificate_hash": "e2ed749790e9daad85e4b778a156d86ef242768b"
+          }
+        },
+        {
+          "client_id": "807189974100-36lf8k85hfr79gfb9q35diibr1ev9tlm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSalbg-h2lhUVh9Uv0lWMC0ss_q9A-CiM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807189974100-36lf8k85hfr79gfb9q35diibr1ev9tlm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

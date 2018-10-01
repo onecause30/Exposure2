@@ -4,26 +4,61 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { FeedPage }  from '../pages/feed/feed';
+import { CommentsPage } from '../pages/comments/comments';
+import { Camera } from '@ionic-native/camera';
+import { Firebase } from '@ionic-native/firebase'
+
+import firebase from 'firebase';
+var config = {
+  apiKey: "AIzaSyBM5QH4XHBHWgTabBZO3peGpZi3Z-0D_d8",
+    authDomain: "exposureapp-9e773.firebaseapp.com",
+    databaseURL: "https://exposureapp-9e773.firebaseio.com",
+    projectId: "exposureapp-9e773",
+    storageBucket: "exposureapp-9e773.appspot.com",
+    messagingSenderId: "807189974100"
+};
+
+
+
+
+
+firebase.initializeApp(config);
+firebase.firestore().settings({
+  timestampsInSnapshots: true
+})
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    LoginPage,
+    SignupPage,
+    FeedPage,
+    CommentsPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LoginPage,
+    SignupPage,
+    FeedPage,
+    CommentsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    Firebase,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
