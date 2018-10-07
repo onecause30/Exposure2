@@ -15,6 +15,12 @@ import { Camera } from '@ionic-native/camera';
 import { Firebase } from '@ionic-native/firebase'
 
 import firebase from 'firebase';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ComponentsModule } from '../components/components.module';
+import { GooglePlus } from '@ionic-native/google-plus'; // We'll install this in the next section
+
+
 var config = {
   apiKey: "AIzaSyBM5QH4XHBHWgTabBZO3peGpZi3Z-0D_d8",
     authDomain: "exposureapp-9e773.firebaseapp.com",
@@ -44,7 +50,10 @@ firebase.firestore().settings({
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(config), // <-- firebase here
+    AngularFireAuthModule,
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,6 +64,7 @@ firebase.firestore().settings({
     CommentsPage
   ],
   providers: [
+    GooglePlus,
     StatusBar,
     SplashScreen,
     Camera,
